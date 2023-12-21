@@ -1,0 +1,8 @@
+---
+  - hosts: all
+    become: true
+    tasks:
+      - name: install docker latest
+        ansible.builin.yum:
+          name: docker
+          state: absent
